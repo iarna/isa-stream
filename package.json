@@ -1,0 +1,25 @@
+{
+  "name": "isa-stream",
+  "version": "1.0.0",
+  "description": "Ducktype if something is a Node.js compatible stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iarna/isa-stream.git"
+  },
+  "keywords": [
+    "isa",
+    "ducktype",
+    "stream",
+    "readable-stream"
+  ],
+  "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iarna/isa-stream/issues"
+  },
+  "homepage": "https://github.com/iarna/isa-stream"
+}
