@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/iarna/isa-stream/issues"
   },
-  "homepage": "https://github.com/iarna/isa-stream"
+  "homepage": "https://github.com/iarna/isa-stream",
+  "files": [
+    "index.js"
+  ]
 }
