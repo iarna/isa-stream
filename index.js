@@ -1,17 +1,17 @@
 'use strict'
 
 var isaEventEmitter = function (obj) {
-    return obj != null && obj.on
+    return obj != null && 'on' in obj
 }
 
 exports.Readable = function (stream) {
-    return isaEventEmitter(stream) && stream.read && stream.setEncoding
-        && stream.resume && stream.pause && stream.pipe
-        && stream.unpipe && stream.unshift && stream.wrap
+    return isaEventEmitter(stream) && 'read' in stream && 'setEncoding' in stream
+        && 'resume' in stream && 'pause' in stream && 'pipe' in stream
+        && 'unpipe' in stream && 'unshift' in stream && 'wrap' in stream
 }
 
 exports.Writable = function (stream) {
-    return isaEventEmitter(stream) && stream.write && stream.end
+    return isaEventEmitter(stream) && 'write' in stream && 'end' in stream
 }
 
 exports.Duplex = function (stream) {
