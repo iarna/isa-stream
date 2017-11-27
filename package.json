@@ -1,6 +1,6 @@
 {
   "name": "isa-stream",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Ducktype if something is a Node.js compatible stream",
   "main": "index.js",
   "scripts": {
