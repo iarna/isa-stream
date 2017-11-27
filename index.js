@@ -7,7 +7,7 @@ var isaEventEmitter = function (obj) {
 exports.Readable = function (stream) {
     return Boolean(isaEventEmitter(stream) && 'read' in stream && 'setEncoding' in stream
         && 'resume' in stream && 'pause' in stream && 'pipe' in stream
-        && 'unpipe' in stream && 'unshift' in stream && 'wrap' in stream)
+        && 'unpipe' in stream && 'unshift' in stream)
 }
 
 exports.Writable = function (stream) {
