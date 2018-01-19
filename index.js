@@ -1,7 +1,7 @@
 'use strict'
 
 var isaEventEmitter = function (obj) {
-    return obj != null && 'on' in obj
+    return obj != null && typeof obj === 'object' && 'on' in obj
 }
 
 exports.Readable = function (stream) {
