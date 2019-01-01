@@ -2,6 +2,7 @@
 const test = require('tap').test
 const isaStream = require('../index.js')
 const stream = require('stream')
+const MiniPass = require('minipass')
 
 test('basic', t => {
   const notStreams = [ 0, '', 'nope', true, false, Symbol(), null, undefined, NaN, Infinity, -Infinity, {}, [], new Date() ]
@@ -10,9 +11,9 @@ test('basic', t => {
     t.is(isaStream.Writable(value), false, String(value) + ' is not Writable')
     t.is(isaStream.Duplex(value), false, String(value) + ' is not Duplex')
   })
-  const rstreams = [ new stream.Readable(), new stream.PassThrough() ]
-  const wstreams = [ new stream.Writable(), new stream.PassThrough() ]
-  const dstreams = [ new stream.PassThrough() ]
+  const rstreams = [ new stream.Readable(), new stream.PassThrough(), new MiniPass() ]
+  const wstreams = [ new stream.Writable(), new stream.PassThrough(), new MiniPass() ]
+  const dstreams = [ new stream.PassThrough(), new MiniPass() ]
   rstreams.forEach(value => {
     t.is(isaStream.Readable(value), true, String(value) + ' is Readable')
   })

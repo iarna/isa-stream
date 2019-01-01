@@ -26,6 +26,7 @@
     "index.js"
   ],
   "devDependencies": {
+    "minipass": "^2.3.5",
     "tap": "^12.1.1"
   }
 }
